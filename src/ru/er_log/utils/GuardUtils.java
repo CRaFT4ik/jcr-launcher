@@ -629,22 +629,24 @@ public class GuardUtils {
         
         return result;
     }
-    
+
+//    Return value from Settings since open source.
     public static String checkToLegality()
     {
-        String domain = checkToLegality(Settings.domain[0]);
-        
-        if (domain == null)
-        {
-            Frame.reportErr("Программа не прошла валидацию!");
-            Frame.reportErr("Обратитесь к разработчику, если вы приобретали данный продукт");
-            
-            if (ChooserFrame.cframe != null) ChooserFrame.cframe.dispose();
-            if (Frame.frame != null) Frame.frame.dispose();
-            System.exit(-1);
-        }
-        
-        return domain;
+        return Settings.domain[0];
+//        String domain = checkToLegality(Settings.domain[0]);
+//
+//        if (domain == null)
+//        {
+//            Frame.reportErr("Программа не прошла валидацию!");
+//            Frame.reportErr("Обратитесь к разработчику, если вы приобретали данный продукт");
+//
+//            if (ChooserFrame.cframe != null) ChooserFrame.cframe.dispose();
+//            if (Frame.frame != null) Frame.frame.dispose();
+//            System.exit(-1);
+//        }
+//
+//        return domain;
     }
     
     private static int numOfConnection = 0;
